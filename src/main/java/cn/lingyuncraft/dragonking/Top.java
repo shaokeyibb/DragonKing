@@ -23,9 +23,13 @@ public class Top {
 
     public static Top get() {
         if (top == null) {
-            top = new Top(Data.data);
+            top = new Top(Data.DATA);
         }
         return top;
+    }
+
+    public static void refresh() {
+        top = new Top(Data.DATA);
     }
 
     private LinkedHashMap<UUID, Integer> sortMap(Map<UUID, Integer> uuidDoubleMap) {
@@ -49,9 +53,5 @@ public class Top {
 
     public UUID getTop(int indexTop) {
         return linkedKeyList.get(indexTop - 1);
-    }
-
-    public static void refresh() {
-        top = new Top(Data.data);
     }
 }

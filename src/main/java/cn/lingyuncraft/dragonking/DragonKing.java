@@ -13,7 +13,8 @@ public final class DragonKing extends PPlugin {
     @Override
     public void onDisable() {
         PlaceHolder.unhook();
-        Data.saveData();
+        pConfig.save();
+        super.onDisable();
     }
 
     @Override

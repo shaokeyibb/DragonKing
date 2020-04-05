@@ -1,14 +1,15 @@
 package cn.lingyuncraft.dragonking;
 
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-public class VanillaListener implements Listener {
+import java.util.UUID;
 
-    public void onPlayerChat(AsyncPlayerChatEvent e){
-        if (!Data.data.containsKey(e.getPlayer().getUniqueId())){
-            Data.data.put(e.getPlayer().getUniqueId(),0);
-        }
-        Data.data.put(e.getPlayer().getUniqueId(),Data.data.get(e.getPlayer().getUniqueId())+1);
+public class VanillaListener implements Listener {
+    @EventHandler
+    public void onPlayerChat(AsyncPlayerChatEvent e) {
+        UUID uuid = e.getPlayer().getUniqueId();
+        Data.DATA.put(uuid, Data.DATA.getOrDefault(uuid, 0) + 1);
     }
 }

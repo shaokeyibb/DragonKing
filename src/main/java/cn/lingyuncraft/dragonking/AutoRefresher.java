@@ -16,7 +16,7 @@ public class AutoRefresher {
 
             @Override
             public void run() {
-                Data.saveData();
+                DragonKing.getInstance().pConfig.save();
             }
         }.runTaskTimerAsynchronously(DragonKing.getInstance(), 0, Data.SAVED_TIME);
     }
