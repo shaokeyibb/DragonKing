@@ -24,9 +24,13 @@ public final class DragonKing extends PPlugin {
 
     @Override
     protected void load() {
-        pConfig = new Data(this);
-        pConfig.init();
         PlaceHolder.hook();
         new AutoRefresher();
+    }
+
+    @Override
+    protected void preload(){
+        pConfig = new Data(this);
+        pConfig.init();
     }
 }

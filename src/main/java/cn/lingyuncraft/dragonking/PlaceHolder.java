@@ -24,6 +24,8 @@ public class PlaceHolder extends PlaceholderHook {
         if (identifier.equals("is")) {
             if (player.getUniqueId() == Top.get().getTop(1)) {
                 return " §2[龙王]";
+            }else{
+                return "";
             }
         }
         if (identifier.equals("current")) {
