@@ -1,0 +1,5 @@
+name: DragonKing
+version: ${project.version}
+main: cn.lingyuncraft.dragonking.DragonKing
+depend: [PattotX,PlaceholderAPI]
+api-version: 1.13
